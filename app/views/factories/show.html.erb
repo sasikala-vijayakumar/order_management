@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @factory %>
+
+<div>
+  <%= link_to "Edit this factory", edit_factory_path(@factory) %> |
+  <%= link_to "Back to factories", factories_path %>
+
+</div>
+
+<ol>
+<% @factory.orders.each do |order| %>
+  <li><%= link_to order.name, order %></li>
+<% end %>
+</ol>
